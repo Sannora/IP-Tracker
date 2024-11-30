@@ -1,0 +1,65 @@
+
+.map-container{
+    width: 100%;
+    height: 60%;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.loading{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(#4848A5 ,#5E83EE );
+    overflow: hidden;
+    position: relative;
+}
+
+.globe-container{
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+.globe-image{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -25%;
+    animation: rotate 5s linear infinite;
+}
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 768px) {
+
+    .map-container{
+        height: 75%;
+    }
+    
+    .loading{
+        height: 75%;
+    }
+    
+    .globe-container{
+        width: 800px;
+        height: 800px;
+    }
+    
+    .globe-image{
+        bottom: -75%;
+    }
+
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
